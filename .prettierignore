@@ -1,0 +1,10 @@
+__tests__/
+.expo/
+.expo-shared/
+.netlify/
+.vscode/
+assets/
+lib/
+web/
+web-build/
+package-lock.json

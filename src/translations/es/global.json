@@ -1,0 +1,111 @@
+{
+  "links": {
+    "selection": "seleccion",
+    "payment": "pago",
+    "resume": "resumen"
+  },
+  "header": "¡Bienvenido a La Culta!",
+  "navbar": {
+    "home": "Inicio",
+    "about": "Acerca",
+    "artists": "Artistas",
+    "schedule": "Cronograma",
+    "pricing": "Precios",
+    "contact": "Contacto",
+    "buy_ticket": "Comprar"
+  },
+  "hero_section": {
+    "presents": "La Culta Presenta",
+    "main": "PK2 En Vivo",
+    "buy_ticket": "Comprar Entradas",
+    "date": "Sábado 25 de Marzo, 2023",
+    "location": "Calle Avaroa #326",
+    "share": "Compartir"
+  },
+  "about_section": {
+    "about": "Acerca de La Culta",
+    "about_description": "Ven a disfrutar de un evento diferente cada semana en los jardines",
+    "once": "Experiencia única en la vida",
+    "once_description": "Vive la mejor experiencia",
+    "whole": "Fiesta Toda La Noche",
+    "whole_description": "Ven a divertirte con todos tus amigos",
+    "magic": "Momentos Mágicos"
+  },
+  "artist_section": {
+    "title": "Conoce a los Artistas",
+    "name": "Nombre",
+    "date": "Fecha"
+  },
+  "schedule_section": {
+    "title": "Nuestro Próximos Eventos",
+    "date": "Fecha"
+  },
+  "tabs": {
+    "selection": "Selección",
+    "payment": "Pago",
+    "resume": "Resumen"
+  },
+  "table": {
+    "concept": "Concepto",
+    "price": "Precio",
+    "quantity": "Cantidad",
+    "total": "Total",
+    "soldOut": "AGOTADO"
+  },
+  "ticketSection": {
+    "title": "Manillas",
+    "termsAndConditions": "Términos y Condiciones",
+    "nextButton": "Ir a Pagar"
+  },
+  "termsAndConditions": {
+    "termsAndConditions": "Términos y Condiciones",
+    "agreement": "He leído y acepto los Términos y Condiciones.",
+    "viewTerms": "Ver los Términos y Condiciones.",
+    "term-1": "* La Culta no se hace responsable de la pérdida del QR para la entrega de las manillas. Es responsabilidad del usuario proporcionar un correo electrónico al que tenga acceso total para recibir el QR.\n* No se aceptan reembolsos para ninguna compra realizada.\n *En caso de no asistir al evento, tanto el pago como la pulsera no son reembolsables y no pueden ser utilizados para otro evento.",
+    "user-responsability-1": "Responsabilidad del usuario: El usuario será el único responsable de cualquier mal uso, pérdida o robo del QR una vez entregado. Es importante mantener el QR seguro y protegido para evitar su uso no autorizado"
+  },
+  "selectionPage": {
+    "popup": "Link de evento inválido. Serás redireccionado a un próximo evento del Berlín al cerrar esta ventana."
+  },
+  "paymentPage": {
+    "popup": "Link de pago inválido. Serás redireccionado a un próximo evento del Berlín al cerrar esta ventana."
+  },
+  "generalTexts": {
+    "close": "Cerrar"
+  },
+  "paymentSection": {
+    "title": "Pagos a realizar",
+    "information": "Información para el pago",
+    "identification": "Carnet de Identidad",
+    "phone": "Número de celular",
+    "name": "Nombres",
+    "lastName": "Apellidos",
+    "email": "Correo",
+    "generateButton": "Generar QR de Pago",
+    "tooltip": "Un correo con el código QR de tus manillas será enviado a esta dirección",
+    "validEmail": "Ingrese un correo válido",
+    "QRTitle": "QR de pago",
+    "generatingQR": "Generando QR...",
+    "redirectingMessage": "No cierres esta ventana. Serás redirigido después del pago.",
+    "pressButton": "Presione el siguiente botón una vez que hayas realizado el pago mediante el código QR.",
+    "loading": "Cargando",
+    "waiting": "Esperando el pago. Por favor, ten en cuenta que este código QR y la reserva expirarán en 30 minutos.",
+    "paymentMade": "Pago Realizado",
+    "downloadQR": "Descargar QR",
+    "paymentDone": "Pago recibido. Estamos preparando tu código QR para las pulseras. Por favor, espera. 😎"
+  },
+  "resumePage": {
+    "popup": "Link de resumen inválido. Serás redireccionado a un próximo evento del Berlín al cerrar esta ventana."
+  },
+  "resumeSection": {
+    "event": "Evento",
+    "concept": "Concepto",
+    "quantity": "Cantidad",
+    "paymentMade": "Pago Realizado Con Éxito",
+    "thanks": "Gracias por su compra",
+    "advice": "Un PDF con el QR ha sido enviado al correo electrónico proporcionado. Por favor, asegúrate de tenerlo a mano cuando vengas por el Berlín.",
+    "data": "Datos del comprador",
+    "downloadPDF": "Descargar PDF",
+    "successfulDownload": "PDF descargo exitosamente"
+  }
+}

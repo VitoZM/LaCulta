@@ -1,0 +1,40 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50px;
+}
+
+.counter button {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.counter button:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+th {
+  width: 20vw;
+  background-color: red;
+}
+
+input[type='checkbox']:checked {
+  background-color: red;
+}

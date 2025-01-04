@@ -1,0 +1,89 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest/globals": true,
+    "react-native/react-native": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:import/warnings",
+    "plugin:react-hooks/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "__DEV__": "readonly",
+    "__VERSION__": "readonly"
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "import", "jest", "react-native"],
+  "rules": {
+    "no-unused-vars": 1,
+    "react/prop-types": 0,
+    "react/no-unescaped-entities": 0,
+    "react/display-name": 0,
+    "array-bracket-spacing": ["error", "never"],
+    "comma-spacing": "error",
+    "comma-style": "error",
+    "computed-property-spacing": "error",
+    "curly": "error",
+    "func-call-spacing": "error",
+    "key-spacing": "error",
+    "keyword-spacing": "error",
+    "no-new-object": "error",
+    "no-restricted-imports": [
+      1,
+      {
+        "paths": [
+          {
+            "name": "react-native",
+            "importNames": ["AsyncStorage"],
+            "message": "Don't use AsyncStorage Directly. Please import 'AsyncStoreService' from '%/services/async-store.service' instead."
+          },
+          {
+            "name": "react-native",
+            "importNames": ["Alert"],
+            "message": "Don't use Alert, it doesn't work on web. dispatch openAlert() instead from '%/store/actions/alert"
+          }
+        ]
+      }
+    ],
+    "no-trailing-spaces": "error",
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true
+      }
+    ],
+    "semi": "error",
+    "semi-spacing": "error",
+    "space-before-blocks": "error",
+    "switch-colon-spacing": "error",
+    "generator-star-spacing": ["error", "after"],
+    "no-var": "error",
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "all"
+      }
+    ],
+    "rest-spread-spacing": "error",
+    "space-infix-ops": "error",
+    "react-native/no-unused-styles": 1,
+    "react-native/split-platform-components": 1,
+    "react-native/no-inline-styles": 1,
+    "react-native/no-color-literals": 1,
+    "react-native/no-single-element-style-arrays": 1
+  }
+}

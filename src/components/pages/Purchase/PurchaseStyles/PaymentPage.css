@@ -1,0 +1,51 @@
+.input-with-tooltip {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #6c757d;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  z-index: 1;
+}
+
+.tooltip::before {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 0;
+  height: 0;
+  content: '';
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: rgba(0, 0, 0, 0.15) transparent transparent transparent;
+}
+
+.purchase__spinner {
+  width: 1em;
+  height: 1em;
+  border: 3px solid rgba(0, 0, 0, 0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: purchase__spinner 1s linear infinite;
+  margin-left: 0.5em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes purchase__spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}

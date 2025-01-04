@@ -1,0 +1,111 @@
+{
+  "links": {
+    "selection": "selection",
+    "payment": "payment",
+    "resume": "resume"
+  },
+  "header": "Welcome to La Culta!",
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "artists": "Artists",
+    "schedule": "Schedule",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "buy_ticket": "Buy Now"
+  },
+  "hero_section": {
+    "presents": "La Culta Presents",
+    "main": "PK2 Live",
+    "buy_ticket": "Buy Now",
+    "date": "Saturday March 25, 2023",
+    "location": "Avaroa Street #326",
+    "share": "Share"
+  },
+  "about_section": {
+    "about": "About La Culta",
+    "about_description": "Come and enjoy a different events every week in the gardens",
+    "once": "Once in Lifetime Experience",
+    "once_description": "Live the best experience",
+    "whole": "Whole Night Party",
+    "whole_description": "Come have fun with all your friends",
+    "magic": "Magic moments"
+  },
+  "artist_section": {
+    "title": "Meet Artists",
+    "name": "Name",
+    "date": "Date"
+  },
+  "schedule_section": {
+    "title": "Event Schedule",
+    "date": "Date"
+  },
+  "tabs": {
+    "selection": "Selection",
+    "payment": "Payment",
+    "resume": "Resume"
+  },
+  "table": {
+    "concept": "Concept",
+    "price": "Price",
+    "quantity": "Quantity",
+    "total": "Total",
+    "soldOut": "SOLD OUT"
+  },
+  "ticketSection": {
+    "title": "Bracelets",
+    "termsAndConditions": "Terms and Conditions",
+    "nextButton": "Go to Payment"
+  },
+  "termsAndConditions": {
+    "termsAndConditions": "Terms and Conditions",
+    "agreement": "I have read and agree to the Terms and Conditions.",
+    "viewTerms": "View the Terms and Conditions.",
+    "term-1": "* La Culta is not responsible for the loss of the QR code for the delivery of wristbands. It is the user's responsibility to provide an email address to which they have full access to receive the QR code.\n* Refunds are not accepted for any purchases made.\n* In case of non-attendance to the event, both the payment and the bracelet are non-refundable and cannot be applied to another event.",
+    "user-responsability-1": "User's Responsibility: The user will be solely responsible for any misuse, loss, or theft of the QR code once it has been delivered. It is important to keep the QR code secure and protected to prevent unauthorized use."
+  },
+  "selectionPage": {
+    "popup": "Invalid event link. You will be redirected to an upcoming event in La Culta upon closing this window."
+  },
+  "paymentPage": {
+    "popup": "Invalid payment link. You will be redirected to an upcoming event in La Culta upon closing this window."
+  },
+  "generalTexts": {
+    "close": "Close"
+  },
+  "paymentSection": {
+    "title": "Payments to be made",
+    "information": "Payment information",
+    "identification": "Identity document",
+    "phone": "Cell phone number",
+    "name": "Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "generateButton": "Generate payment QR code",
+    "tooltip": "An email with the QR code for your bracelets will be sent to this address",
+    "validEmail": "Please enter a valid email",
+    "QRTitle": "Payment QR code",
+    "generatingQR": "Generating QR code...",
+    "redirectingMessage": "Do not close this window! You'll be redirected after payment.",
+    "pressButton": "Press the following button once you have made the payment using the QR code.",
+    "loading": "Loading",
+    "waiting": "Waiting for the payment. Please note that this QR code and reservation will expire in 30 minutes.",
+    "paymentMade": "Payment made",
+    "downloadQR": "Download QR",
+    "paymentDone": "Payment received. we are preparing your QR for bracelets, please wait. 😎"
+  },
+  "resumePage": {
+    "popup": "Invalid resume link. You will be redirected to an upcoming event in La Culta upon closing this window."
+  },
+  "resumeSection": {
+    "event": "Event",
+    "concept": "Concept",
+    "quantity": "Quantity",
+    "paymentMade": "Payment Successful",
+    "thanks": "Thank you for your purchase",
+    "advice": "A PDF with the QR code has been sent to the provided email address. Please make sure to have it handy when you come to La Culta.",
+    "data": "Buyer information",
+    "downloadPDF": "Download PDF",
+    "successfulDownload": "PDF downloaded successfully"
+  }
+}
