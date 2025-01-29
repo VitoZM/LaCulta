@@ -121,26 +121,34 @@ a {
   display: inline-block;
   background-color: var(--third-color);
   text-decoration: none;
-  border: 1px solid var(--third-color); /* Added 'solid' */
-  color: white; /* Ensure text color is visible */
-  outline: none; /* Remove default focus outline */
+  border: 1px solid var(--third-color);
+  color: white;
+  outline: none;
   font-weight: bold;
 }
 
+/* Hover & Active */
 .btn-primary:hover,
 .btn-primary:active {
   background-color: var(--link-hover-color) !important;
-  border-color: var(--link-hover-color) !important; /* Ensure border color matches */
-  color: white; /* Maintain text visibility */
+  border-color: var(--link-hover-color) !important;
+  color: white;
 }
 
-/* Selected state */
+/* Selected */
 .btn-primary.selected {
   background-color: #343a40 !important;
   border-color: #343a40 !important;
-  color: white; /* Adjust text color for better contrast */
+  color: white;
 }
 
+/* Disabled state */
+.btn-primary:disabled {
+  background-color: rgba(214, 74, 74, 0.5) !important; /* Lighter version of #343a40 */
+  border-color: rgba(52, 58, 64, 0.5) !important;
+  color: rgba(255, 255, 255, 0.7); /* Slightly faded text */
+  cursor: not-allowed; /* Show disabled cursor */
+}
 a:hover {
   color: var(--link-hover-color);
 }
@@ -1241,4 +1249,20 @@ strong {
 
 .item_wrap.online .item_right .status:before {
   background: #7fc469;
+}
+
+.phone-input {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 8px; /* Material UI border-radius */
+  padding: 12px;
+}
+
+.phone-input input {
+  font-size: 16px; /* Adjust font size */
+  padding-left: 50px; /* Make room for country code dropdown */
+}
+
+.phone-input .PhoneInputCountry {
+  font-size: 16px; /* Country code dropdown size */
 }

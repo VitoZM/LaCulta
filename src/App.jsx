@@ -2,6 +2,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 
 import HomePage from './components/pages/Home/HomePage';
 import StepOne from './components/pages/Booking/StepOne';
+import StepTwo from './components/pages/Booking/StepTwo';
 import SelectionPage from './components/pages/Purchase/SelectionPage';
 import PaymentPage from './components/pages/Purchase/PaymentPage';
 import ResumePage from './components/pages/Purchase/ResumePage';
@@ -22,6 +23,7 @@ const App = () => {
       <Route exact path="/" element={<HomePage />} />
       <Route path="*" element={<NotFound />} />
       <Route path="/booking" element={<StepOne />} />
+      <Route path="/booking-2" element={<StepTwo />} />
       {/* <Route path="/selection/:event" element={<SelectionPage />} />
       <Route path="/payment/:ePayment" element={<PaymentPage />} />
       <Route path="/resume/:eResume" element={<ResumePage />} /> */}

@@ -5,23 +5,16 @@ import { faClock } from '@fortawesome/free-solid-svg-icons'; // Import clock ico
 const TimeSection = ({ onChange, showTimeAlert }) => {
   const [selectedTime, setSelectedTime] = useState('');
 
-  // Function to generate time options from 10:00 AM to 9:30 PM
+  // Function to generate time options in 24-hour format but display them in 12-hour format
   const generateTimeOptions = () => {
     const times = [];
-    let hour = 10;
-    let minute = 0;
-
-    while (hour < 22) {
-      const amPm = hour < 12 ? 'AM' : 'PM';
-      const formattedHour = hour > 12 ? hour - 12 : hour; // Convert 24-hour format to 12-hour
-      const formattedMinute = minute === 0 ? '00' : '30';
-      times.push(`${formattedHour}:${formattedMinute} ${amPm}`);
-
-      // Increment time by 30 minutes
-      minute += 30;
-      if (minute === 60) {
-        minute = 0;
-        hour++;
+    for (let hour = 10; hour < 22; hour++) {
+      for (let minute of [0, 30]) {
+        const value = `${hour.toString().padStart(2, '0')}:${minute === 0 ? '00' : '30'}`; // 24-hour format
+        const displayHour = hour > 12 ? hour - 12 : hour; // Convert 24-hour to 12-hour format
+        const amPm = hour < 12 ? 'AM' : 'PM';
+        const displayText = `${displayHour}:${minute === 0 ? '00' : '30'} ${amPm}`;
+        times.push({ value, displayText });
       }
     }
     return times;
@@ -47,13 +40,14 @@ const TimeSection = ({ onChange, showTimeAlert }) => {
             }}
           >
             <option value="">Selecciona una hora</option>
-            {generateTimeOptions().map((time, index) => (
-              <option key={index} value={time}>
-                {time}
+            {generateTimeOptions().map(({ value, displayText }, index) => (
+              <option key={index} value={value}>
+                {displayText}
               </option>
             ))}
           </select>
         </div>
+
         {/* Red alert message when time is not selected */}
         {showTimeAlert && (
           <p style={{ color: 'red', fontWeight: 'bold', marginTop: '10px' }}>
