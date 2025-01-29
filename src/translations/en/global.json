@@ -12,14 +12,15 @@
     "schedule": "Schedule",
     "pricing": "Pricing",
     "contact": "Contact",
-    "buy_ticket": "Buy Now"
+    "buy_ticket": "Buy Now",
+    "book_now": "Book Now!"
   },
   "hero_section": {
     "presents": "La Culta Presents",
     "main": "PK2 Live",
     "buy_ticket": "Buy Now",
     "date": "Saturday March 25, 2023",
-    "location": "Avaroa Street #326",
+    "location": "Beni Street #31",
     "share": "Share"
   },
   "about_section": {

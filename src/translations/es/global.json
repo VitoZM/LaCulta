@@ -12,14 +12,15 @@
     "schedule": "Cronograma",
     "pricing": "Precios",
     "contact": "Contacto",
-    "buy_ticket": "Comprar"
+    "buy_ticket": "Comprar",
+    "book_now": "Reserva Ya!"
   },
   "hero_section": {
     "presents": "La Culta Presenta",
     "main": "PK2 En Vivo",
     "buy_ticket": "Comprar Entradas",
     "date": "Sábado 25 de Marzo, 2023",
-    "location": "Calle Avaroa #326",
+    "location": "Calle Beni #31",
     "share": "Compartir"
   },
   "about_section": {

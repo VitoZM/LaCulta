@@ -32,8 +32,8 @@ const HomePage = () => {
         <Header />
         <Navbar currentPage={HOME_PAGE} link={event?.link} />
         <HeroSection event={event} />
-        <AboutSection />
-        <ArtistSection />
+        {/* <AboutSection /> */}
+        {/* <ArtistSection /> */}
       </main>
       <Footer />
     </>

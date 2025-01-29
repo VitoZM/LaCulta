@@ -92,13 +92,11 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
             <h5 className="site-footer-title mb-3">Location</h5>
 
-            <p className="text-white d-flex mt-3 mb-2">
-              Avaroa 326, a tan sólo dos cuadra de la plaza 25 de mayo
-            </p>
+            <p className="text-white d-flex mt-3 mb-2">Beni #31, breve indicación</p>
 
             <a
               className="link-fx-1 color-contrast-higher mt-3"
-              href="https://goo.gl/maps/rPZYFd5Kynps695Z8"
+              href="https://maps.app.goo.gl/z9M43RfmjUS2ch1g9"
               target="_blank"
             >
               <span>Ubicación en mapa</span>

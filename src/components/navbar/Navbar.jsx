@@ -19,24 +19,28 @@ const Navbar = (props) => {
     return isHomePage() ? '' : '/';
   };
 
-  const handleButButton = () => {
+  const handleBookButton = () => {
     setIsLoading(true);
-    window.location = link;
+    window.location = 'booking';
   };
 
   return (
     <div id="sticky-wrapper" className="sticky-wrapper" style={{ height: 62 }}>
-      <nav className="navbar navbar-expand-lg" id="navbar">
+      <nav
+        className="navbar navbar-expand-lg"
+        id="navbar"
+        style={!isHomePage() ? { backgroundColor: 'black' } : null}
+      >
         <div className="container">
           <a className="navbar-brand" href={isHomePage() ? '#' : '/'}>
-            <img src="/images/logos/white-logo.png" width={120} className="img-fluid" />
+            <img src="/images/logos/white-logo.png" width={100} className="img-fluid" />
           </a>
 
-          <LanguageButton className="btn custom-language-btn d-lg-none ms-auto me-4" />
+          <LanguageButton className="btn custom-language-btn d-lg-none ms-auto" />
 
           {isHomePage() && (
-            <button className="btn custom-btn d-lg-none ms-auto me-4" onClick={handleButButton}>
-              {tKey('buy_ticket')}
+            <button className="btn custom-btn d-lg-none ms-auto me-4" onClick={handleBookButton}>
+              {tKey('book_now')}
             </button>
           )}
 
@@ -97,8 +101,8 @@ const Navbar = (props) => {
             <LanguageButton className="btn custom-language-btn d-lg-block d-none" />
 
             {isHomePage() && (
-              <button className="btn custom-btn d-lg-block d-none" onClick={handleButButton}>
-                {isLoading ? <div className="purchase__spinner"></div> : tKey('buy_ticket')}
+              <button className="btn custom-btn d-lg-block d-none" onClick={handleBookButton}>
+                {isLoading ? <div className="purchase__spinner"></div> : tKey('book_now')}
               </button>
             )}
           </div>

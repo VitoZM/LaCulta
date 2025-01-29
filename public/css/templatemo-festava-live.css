@@ -12,6 +12,7 @@ https://templatemo.com/tm-583-festava-live
 :root {
   --white-color: #ffffff;
   --primary-color: rgb(197, 0, 5);
+  --third-color: #e5432c;
   --secondary-color: #c50005;
   --section-bg-color: #f0f8ff;
   --custom-btn-bg-color: #c50005;
@@ -114,6 +115,30 @@ a {
   display: inline-block;
   color: var(--primary-color);
   text-decoration: none;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--third-color);
+  text-decoration: none;
+  border: 1px solid var(--third-color); /* Added 'solid' */
+  color: white; /* Ensure text color is visible */
+  outline: none; /* Remove default focus outline */
+  font-weight: bold;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: var(--link-hover-color) !important;
+  border-color: var(--link-hover-color) !important; /* Ensure border color matches */
+  color: white; /* Maintain text visibility */
+}
+
+/* Selected state */
+.btn-primary.selected {
+  background-color: #343a40 !important;
+  border-color: #343a40 !important;
+  color: white; /* Adjust text color for better contrast */
 }
 
 a:hover {
@@ -352,12 +377,37 @@ strong {
   overflow: hidden;
 }
 
-.custom-slider {
+.slide-item {
+  height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .slide-item {
+    height: 300px;
+  }
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.color-overlay {
   position: absolute;
   top: 0;
   left: 0;
-  object-fit: cover;
+  width: 100%;
   height: 100%;
+  opacity: 0.9; /* Adjust opacity as needed */
+  mix-blend-mode: multiply; /* This blends the color with the image */
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {

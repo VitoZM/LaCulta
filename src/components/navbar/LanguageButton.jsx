@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 //translations
-import { languages, languageKey } from "../../constants/languages";
-import { useTranslation } from "react-i18next";
-import { getCurrentLanguage } from "../../utils/i18n";
+import { languages, languageKey } from '../../constants/languages';
+import { useTranslation } from 'react-i18next';
+import { getCurrentLanguage } from '../../utils/i18n';
 //flags
-import spanishFlag from "/images/logos/es.svg";
-import englishFlag from "/images/logos/en.svg";
+import spanishFlag from '/images/logos/es.svg';
+import englishFlag from '/images/logos/en.svg';
 
 const LanguageButton = (props) => {
-  const [t, i18n] = useTranslation("global");
+  const [t, i18n] = useTranslation('global');
   const { SPANISH, ENGLISH } = languages;
   const { className } = props;
   const currentLanguage = getCurrentLanguage();
