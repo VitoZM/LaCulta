@@ -16,11 +16,10 @@ const defaultSelectedDateIndex = 1;
 const DateSection = ({ onChange }) => {
   const [selectedDateIndex, setSelectedDateIndex] = useState(defaultSelectedDateIndex); // Store index of selected date button
   const selectedDateRef = useRef(null); // Store the actual date in yyyy-mm-dd format
-  const [selectedDateState, setSelectedDateState] = useState(); // Store index of selected date button
   const [customDate, setCustomDate] = useState(false);
 
   const today = new Date();
-  const days = ['LUN', 'MAR', 'MIÉ', 'JUE', 'VIE', 'SÁB', 'DOM'];
+  const days = ['DOM', 'LUN', 'MAR', 'MIÉ', 'JUE', 'VIE', 'SÁB'];
   const months = [
     'ENE',
     'FEB',
@@ -40,7 +39,6 @@ const DateSection = ({ onChange }) => {
     const futureDate = new Date();
     futureDate.setDate(today.getDate() + index);
     setSelectedDateIndex(index); // Set the index of the selected date button
-    setSelectedDateState(futureDate);
     onChange(formatDate(futureDate));
   };
 
