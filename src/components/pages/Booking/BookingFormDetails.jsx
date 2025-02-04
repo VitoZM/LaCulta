@@ -232,7 +232,7 @@ const BookingFormDetails = ({ data }) => {
           style={{ backgroundColor: '#7a72b1' }}
           onClick={() => setShowSpecialRequest(!showSpecialRequest)}
         >
-          {showSpecialRequest ? 'Ocultar Petición Especial' : 'Añadir Petición Especial'}
+          {showSpecialRequest ? 'Ocultar Petición Especial' : 'Añadir Petición Especial +'}
         </button>
       )}
 
