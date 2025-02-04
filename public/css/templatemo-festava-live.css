@@ -13,6 +13,7 @@ https://templatemo.com/tm-583-festava-live
   --white-color: #ffffff;
   --primary-color: rgb(197, 0, 5);
   --third-color: #e5432c;
+  --fourth-color: #7a72b1;
   --secondary-color: #c50005;
   --section-bg-color: #f0f8ff;
   --custom-btn-bg-color: #c50005;
@@ -149,6 +150,40 @@ a {
   color: rgba(255, 255, 255, 0.7); /* Slightly faded text */
   cursor: not-allowed; /* Show disabled cursor */
 }
+
+.btn-secondary {
+  display: inline-block;
+  background-color: var(--fourth-color);
+  text-decoration: none;
+  border: 1px solid var(--fourth-color);
+  color: white;
+  outline: none;
+  font-weight: bold;
+}
+
+/* Hover & Active */
+.btn-secondary:hover,
+.btn-secondary:active {
+  background-color: #5e5888 !important;
+  border-color: #5e5888 !important;
+  color: white;
+}
+
+/* Selected */
+.btn-secondary.selected {
+  background-color: #5e5888 !important;
+  border-color: #5e5888 !important;
+  color: white;
+}
+
+/* Disabled state */
+.btn-secondary:disabled {
+  background-color: #aba0f3 !important; /* Lighter version of #343a40 */
+  border-color: #aba0f3 !important;
+  color: rgba(255, 255, 255, 0.7); /* Slightly faded text */
+  cursor: not-allowed; /* Show disabled cursor */
+}
+
 a:hover {
   color: var(--link-hover-color);
 }

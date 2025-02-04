@@ -8,6 +8,7 @@ import {
   Select,
   InputLabel,
   FormControl,
+  Button,
 } from '@mui/material';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
@@ -32,6 +33,7 @@ const BookingFormDetails = ({ data }) => {
     setValue,
   } = useForm();
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const [showSpecialRequest, setShowSpecialRequest] = useState(false);
 
   const handleBook = async (formData) => {
     setLoading(true); // Start loading
@@ -59,18 +61,24 @@ const BookingFormDetails = ({ data }) => {
           phone: formData.phone.replace('+', ''), // Assuming you have phone value from the form
           quantity: people, // Assuming you have people value from the form
           bookingDateShown: bookingDateShown,
+          specialRequest: formData.specialRequest,
         },
       });
 
       setLoading(false); // Stop loading
 
       if (response.success) {
+        sessionStorage.removeItem('data');
         // Show success pop-up and redirect when it gets closed
-        Swal.fire('Reserva confirmada', '¡Su reserva ha sido confirmada!', 'success').then(() => {
-          sessionStorage.removeItem('data');
+        Swal.fire(
+          '¡Reserva hecha exitosamente!',
+          'Espera a que nos pongamos en contacto contigo',
+          'success'
+        ).then(() => {
           window.location.href = 'booking'; // Redirect to desired page
         });
       } else {
+        sessionStorage.removeItem('data');
         // Show an error pop-up if the time is unavailable
         Swal.fire({
           icon: 'error',
@@ -119,7 +127,7 @@ const BookingFormDetails = ({ data }) => {
     <form onSubmit={handleSubmit(onSubmit)} className="mt-4">
       {/* Sector */}
       <FormControl fullWidth margin="normal">
-        <InputLabel id="sector-label">Sector</InputLabel>
+        <InputLabel id="sector-label">Sector *</InputLabel>
         <Controller
           name="sector"
           control={control}
@@ -152,7 +160,7 @@ const BookingFormDetails = ({ data }) => {
         render={({ field }) => (
           <TextField
             {...field}
-            label="Nombre Completo"
+            label="Nombre Completo *"
             variant="outlined"
             fullWidth
             margin="normal"
@@ -166,17 +174,17 @@ const BookingFormDetails = ({ data }) => {
       <Controller
         name="email"
         control={control}
-        rules={{
-          required: 'Por favor ingrese un email válido',
-          pattern: {
-            value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-            message: 'Por favor ingrese un email válido',
-          },
-        }}
+        // rules={{
+        //   required: 'Por favor ingrese un email válido',
+        //   pattern: {
+        //     value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+        //     message: 'Por favor ingrese un email válido',
+        //   },
+        // }}
         render={({ field }) => (
           <TextField
             {...field}
-            label="Email"
+            label="Email (Opcional)"
             variant="outlined"
             fullWidth
             margin="normal"
@@ -197,7 +205,7 @@ const BookingFormDetails = ({ data }) => {
             marginBottom: '8px', // Spacing between label and input
           }}
         >
-          Número de teléfono
+          Número de teléfono *
         </label>
         <Controller
           name="phone"
@@ -206,7 +214,7 @@ const BookingFormDetails = ({ data }) => {
           render={({ field }) => (
             <PhoneInput
               {...field}
-              placeholder="Número de teléfono"
+              placeholder="Número de teléfono *"
               defaultCountry="BO"
               international
               className="phone-input"
@@ -215,8 +223,38 @@ const BookingFormDetails = ({ data }) => {
           )}
         />
       </div>
-
       {errors.phone && <span className="text-danger">{errors.phone.message}</span>}
+
+      {/* Botón para añadir petición especial */}
+      {!showSpecialRequest && (
+        <button
+          className="btn btn-secondary mb-2"
+          style={{ backgroundColor: '#7a72b1' }}
+          onClick={() => setShowSpecialRequest(!showSpecialRequest)}
+        >
+          {showSpecialRequest ? 'Ocultar Petición Especial' : 'Añadir Petición Especial'}
+        </button>
+      )}
+
+      {/* Campo de texto para petición especial */}
+      {showSpecialRequest && (
+        <Controller
+          name="specialRequest"
+          control={control}
+          render={({ field }) => (
+            <TextField
+              {...field}
+              label="Petición Especial (Opcional)"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              multiline
+              rows={3}
+              className="mb-3"
+            />
+          )}
+        />
+      )}
 
       {/* Terms and Conditions */}
       <FormControlLabel
@@ -236,7 +274,7 @@ const BookingFormDetails = ({ data }) => {
           <>
             Acepto los{' '}
             <span style={{ color: '#7a72b1', cursor: 'pointer' }} onClick={handleTermsClick}>
-              términos y condiciones
+              términos y condiciones *
             </span>
           </>
         }
